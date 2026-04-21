@@ -1,0 +1,24 @@
+---
+const {product} = Astro.props;
+---
+<a href=`details/${product.id}`>
+    <article>
+        <img src={product.Image_Src} alt="productimage"/>
+        <div> 
+            <h2>{product.Title}</h2>
+            <p>Kr. {product.Variant_Price},-</p> 
+            <p>{product.Variant_Compare_At_Price}</p> 
+        </div>
+        <button>Læg i kurv</button>
+     
+    </article>
+</a>
+<style>
+    button {
+  border-radius: 23px;
+  margin-right: 10px;
+  padding: 6px 30px;
+  border: 1px solid #ccc;
+  background: white;
+}
+    </style>
