@@ -1,0 +1,84 @@
+---
+import ol from "../imgs/glas.webp";
+---
+
+<section class="hero-wrapper">
+
+
+  <div class="hero-text">
+    <div class="inner">
+      <h2>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Maecenas quis velit accumsan, temp.
+      </h2>
+
+      <p>
+      Vestibulum vitae hendrerit dui. Nulla vestibulum imperdiet sem, aliquam laoreet lacus mattis ut. Nunc ligula dolor, dapibus nec libero ut, facilisis interdum metus. Vivamus posuere, lectus ac convallis consequat, diam felis congue orci, eu fermentum velit nisi et lectus. Pellentesque a vestibulum massa, quis porta felis. Ut tellus arcu, orci. 
+      </p>
+
+      <button>New Arrivals</button>
+    </div>
+  </div>
+
+  <!-- Højre (billede) -->
+  <div class="hero-image">
+    <img src={ol.src} alt="Øl glas og dåse" />
+  </div>
+
+</section>
+
+<style>
+
+.hero-wrapper {
+  display: block;
+}
+
+.inner {
+  max-width: 480px;
+  width: 100%;
+  gap: 16px;
+}
+
+.hero-text h2 {
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.hero-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+.hero-text button {
+  margin-top: 10px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #043E2F;
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+}
+
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 768px) {
+ .hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text image";
+  }
+  
+  .hero-text {
+    padding: 80px;
+  }
+}
+</style>
