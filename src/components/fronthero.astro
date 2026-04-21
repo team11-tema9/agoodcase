@@ -1,0 +1,192 @@
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Mythos 5%</h1>
+      <h1>Lager</h1>
+
+      <p>En let og forfriskende lager med sprød smag og mild bitterhed.</p>
+      <p>Frisk, ren og nem at drikke – perfekt til varme dage og afslappede øjeblikke.</p>
+
+      <a href="#" class="btn">Udforsk</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="joseimg/beer.webp" alt="Mythos øl" />
+    </div>
+  </div>
+
+  <div class="hero-wood"></div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    background: #FFFEFC;
+    min-height: 1200px;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    padding: 3rem 2rem 0 5rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text {
+    max-width: 900px;
+    padding-top: 8rem;
+    position: relative;
+    z-index: 3;
+  }
+
+  .hero-text h1 {
+    margin: 0;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: clamp(5.5rem, 8vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .hero-text h1:first-of-type {
+    margin-bottom: 0.2rem;
+  }
+
+  .hero-text h1:last-of-type {
+    margin-bottom: 1.6rem;
+  }
+
+  .hero-text p {
+    margin: 0 0 0.6rem;
+    max-width: 620px;
+    font-family: "Figtree", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #111;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.2rem;
+    width: 195px;
+    height: 60px;
+    border-radius: 14px;
+    background: #044c3a;
+    color: white;
+    text-decoration: none;
+    font-family: "Figtree", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .hero-image {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 800px;
+  }
+
+  .hero-image img {
+    width: 950px;
+    max-width: none;
+    position: absolute;
+    top: 2rem;
+    right: -10rem;
+    z-index: 3;
+  }
+
+
+.hero-wood {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 380px;
+
+  background-image: url("joseimg/tree.webp");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1.25rem 0;
+    position: relative;
+  }
+
+  .hero-text {
+    max-width: 380px;
+    padding-top: 2rem;
+    z-index: 4;
+  }
+
+  .hero-text h1 {
+    font-size: 4.5rem;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+  }
+
+.hero-text h1:first-of-type {
+  margin-bottom: 0.1rem;
+}
+
+.hero-text h1:last-of-type {
+  margin-bottom: 2.2rem;
+}
+
+  .hero-text p {
+    max-width: 280px;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .btn {
+    width: 190px;
+    height: 58px;
+    margin-top: 4rem;
+    font-size: 1rem;
+    border-radius: 14px;
+  }
+
+  .hero-image {
+    position: absolute;
+    right: 0;
+    bottom: -220px;
+    width: 100%;
+    min-height: 0;
+    margin-top: 0;
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  .hero-image img {
+    position: absolute;
+    width: 580px;
+    max-width: none;
+    right: -160px;
+    bottom: 0;
+    top: auto;
+  }
+
+  .hero-wood {
+    height: 220px;
+   bottom: 0px;
+    background-position: bottom;
+  }
+}
+</style>
