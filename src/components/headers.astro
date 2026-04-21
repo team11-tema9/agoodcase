@@ -1,0 +1,159 @@
+---
+import search from "../assets/search.svg";
+import user from "../assets/user.svg";
+import cart from "../assets/cart.svg";
+---
+
+<header class="site-header">
+  <div class="desktop-nav">
+    
+    <a href="/" class="logo">
+      <img src="joseimg/logo.webp" alt="A Good Case logo" />
+    </a>
+
+    <nav class="nav-links">
+      <a href="#">ØL</a>
+      <a href="#">SMAGEKASSER</a>
+      <a href="#">FADØL</a>
+      <a href="#">ABONNEMENT</a>
+      <a href="#">GAVER</a>
+      <a href="#">OPLEVELSER</a>
+      <a href="#">ERHVERV</a>
+    </nav>
+
+    <div class="nav-icons">
+      <a href="#" aria-label="Søg">
+        <img src={search.src} alt="" />
+      </a>
+      <a href="#" aria-label="Profil">
+        <img src={user.src} alt="" />
+      </a>
+      <a href="#" aria-label="Kurv">
+        <img src={cart.src} alt="" />
+      </a>
+    </div>
+
+  </div>
+
+  <div class="mobile-nav">
+    <button class="burger" aria-label="Åbn menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a href="/" class="mobile-logo">
+      <img src="joseimg/logo.webp" alt="A Good Case logo" />
+    </a>
+
+    <a href="#" class="mobile-search" aria-label="Søg">
+      <img src={search.src} alt="" />
+    </a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: #fffefc;
+    border-bottom: 1px solid #e8e5e0;
+    position: relative;
+    z-index: 20;
+  }
+
+  /* DESKTOP */
+  .desktop-nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1.7rem 2rem;
+  }
+
+  .logo img {
+    display: block;
+    width: 46px;
+    height: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-family: "Figtree", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    line-height: 1;
+  }
+
+  .nav-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.8rem;
+  }
+
+  .nav-icons a,
+  .mobile-search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .nav-icons img,
+  .mobile-search img {
+    width: 26px; 
+    height: 26px;
+    display: block;
+  }
+
+  /* MOBILE */
+  .mobile-nav {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 1.5rem;
+  }
+
+  .mobile-logo img {
+    display: block;
+    width: 42px;
+    height: auto;
+  }
+
+  .burger {
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .burger span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: #111;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 900px) {
+    .desktop-nav {
+      display: none;
+    }
+
+    .mobile-nav {
+      display: flex;
+    }
+  }
+</style>

@@ -1,0 +1,136 @@
+---
+---
+
+<section class="opening">
+  <div class="overlay"></div>
+
+  <img src="/menneskerl.webp" class="people left" alt="" />
+  <img src="/menneskerr.webp" class="people right" alt="" />
+
+  <div class="opening-content">
+    <slot name="title">
+      <h2>
+        Vores lagersalgs åbningstider
+      </h2>
+    </slot>
+
+    <p>ONSDAG - FREDAG<br />KL. 10:00-17:00</p>
+
+    <p>
+      <strong>EKSTRA ÅBENT:</strong><br />
+      LØRDAG D. 28. MARTS<br />
+      KL. 11:00-14:00
+    </p>
+
+    <p>
+      TIRSDAG D. 31. MARTS &amp;<br />
+      ONSDAG D. 1 APRIL<br />
+      KL. 10:00-17:00
+    </p>
+  </div>
+</section>
+
+<style>
+  .opening {
+    position: relative;
+    min-height: 500px;
+    background-image: url("public/herosocial.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(90, 65, 57, 0.72);
+    z-index: 1;
+  }
+
+.opening-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: none;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.opening-content h2 {
+  margin: 0 0 2rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+  .opening-content p {
+    margin: 0 0 1.5rem;
+    font-family: "Figtree", sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+.people {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0.8;
+
+  width: 600px;       
+  max-width: 38%;
+  pointer-events: none;
+}
+
+.people.left {
+  left: 60px;  
+}
+
+.people.right {
+  right: 60px;
+}
+
+  @media (max-width: 900px) {
+    .opening {
+      min-height: 420px;
+    }
+
+    .opening-content h2 {
+      font-size: 2.2rem;
+    }
+
+   .opening-content p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.people {
+  width: 180px;        
+  top: 55%;           
+  transform: translateY(-50%);
+}
+
+.people.left {
+  left: -20px;
+}
+
+.people.right {
+  right: -20px;
+}
+
+.opening-content h2 {
+  white-space: normal;
+  font-size: 2rem;
+  line-height: 1.1;
+  max-width: 320px;
+  margin: 0 auto 1.5rem;
+}
+  }
+</style>
