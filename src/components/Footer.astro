@@ -1,0 +1,147 @@
+<meta charset="UTF-8">
+<footer class="footer-wrapper">
+  <!-- Mobil -->
+  <section class="footermobil">
+    <h2>Tilmeld dig vores nyhedsbrev</h2>
+
+
+    <form class="newsletter">
+    
+      <input type="email" placeholder="Email" required />
+      <button type="submit">Abonnér</button>
+    </form>
+  </section>
+
+  <!-- Desktop -->
+  <section class="footercomputer">
+    <h2>Få besked om nye releases, smagekasser og særlige tilbud – direkte i din indbakke.</h2>
+
+
+      <div class="flexdirection">
+   
+        <a href="#">Shop</a>
+        <a href="#">Smagskasser</a>
+        <a href="#">Abonnement</a>
+        <a href="#">Om os</a>
+        <a href="#">FAQ</a>
+        <a href="#">Kontakt</a></div>
+
+         <p class="footer-note">© 2026 A Good Case</p>
+  </section>
+ 
+</footer>
+
+<style>
+  /* FOOTER */
+.footer-wrapper {
+  margin-top: 40px;
+  padding: 80px 20px;
+  background: #043E2F;
+    color: white;
+  font-family: "Manrope", sans-serif;
+  
+}
+
+/* -------- Mobil -------- */
+.footer-wrapper .footermobil {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+.footer-wrapper h2 {
+  max-width: 500px;
+  margin: 0 auto;   /* centrerer boksen */
+  text-align: center;
+
+}
+
+/* Newsletter */
+.footer-wrapper .newsletter {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.footer-wrapper input {
+  padding: 10px;
+  border: 1px white;
+  background: white;
+}
+
+.footer-wrapper button {
+  padding: 10px;
+  border: 1px white;
+  background: white;
+  cursor: pointer;
+}
+.footer-note {
+  margin-top: 40px;
+  font-size: 12px;
+  opacity: 0.7;
+text-align: center;
+}
+
+.footer-wrapper .newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* ændret fra column */
+  gap: 0;
+}
+
+.footer-wrapper input {
+  padding: 12px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  width: 220px;
+  border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.footer-wrapper button {
+  padding: 12px 16px;
+  border: 1px solid white;
+  background: white;
+  color: #043E2F;
+  cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+/* -------- Desktop -------- */
+.footer-wrapper .footercomputer {
+  display: none;
+}
+
+/* -------- Media query -------- */
+@media (min-width: 768px) {
+  .footer-wrapper .footermobil {
+    display: block;
+  }
+
+  .footer-wrapper .footercomputer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .footer-wrapper .flexdirection {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px 70px;
+  }
+
+  .footer-wrapper a {
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+  }
+.footercomputer {
+  justify-items: center;
+  text-align: center;
+}
+}
+
+</style>
