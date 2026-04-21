@@ -1,12 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from "../components/headers.astro";
-import FrontHero from "../components/fronthero.astro";
+import Card from '../components/card.astro';
 import ProductCard from '../components/ProductCard.astro';
 import Productlist1 from '../components/Productlist1.astro';
-import Emilie from '../components/Emilie.astro';
-import Beerbrands from '../components/beerbrands.astro';
-import Openinghours from '../components/openinghours.astro';
 import Footer from '../components/Footer.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -15,11 +12,8 @@ import Footer from '../components/Footer.astro';
 
 <Layout title="A Good Case">
   <Header />
-  <FrontHero />
-  <ProductCard />
-  <Productlist1 />
-  <Emilie />
-  <Beerbrands />
-  <Openinghours />
+    <Card />
+    <ProductCard />
+    <Productlist1 />
   <Footer />
 </Layout>
