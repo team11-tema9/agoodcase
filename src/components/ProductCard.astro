@@ -1,0 +1,65 @@
+---
+const { Title, Variant_Price, Variant_Compare_At_Price, Image_Src, link } = Astro.props;
+---
+
+<a href={Image_Src} class="product-card">
+  <div class="image-wrapper">
+    <img src={Image_Src} alt={Title} loading="lazy" />
+  </div>
+
+  <h3>{Title}</h3>
+
+  <div class="price">
+    <span class="new">{Variant_Price} DKK</span>
+    {Variant_Compare_At_Price && <span class="old">{Variant_Compare_At_Price} DKK</span>}
+  </div>
+</a>
+
+<style>
+.product-card {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.image-wrapper {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  font-size: 14px;
+  text-align: center;
+  margin: 10px 0 5px;
+  line-height: 1.4;
+}
+
+.price {
+  font-size: 13px;
+}
+
+.new {
+  color: black;
+}
+
+.old {
+  text-decoration: line-through;
+  color: gray;
+  margin-left: 6px;
+}
+</style>
