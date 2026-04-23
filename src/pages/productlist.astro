@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/card.astro";
+
 
 const endpoint = "https://thdoqgracksozeryynpr.supabase.co/rest/v1/Beer?select=*";
 
@@ -19,8 +19,8 @@ const products = await response.json();
     <h1>Øl</h1>
 
     <section class="product-list">
-      <!-- {products.map((product) => (
-        <Card product={product} />
+       <!--{products.map((product) => (
+        <ProductCard product={product} />
       ))} -->
     </section>
   </main>

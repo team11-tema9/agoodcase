@@ -1,8 +1,8 @@
 ---
-const { Title, Variant_Price, Variant_Compare_At_Price, Image_Src, link } = Astro.props;
+const { id, Title, Variant_Price, Variant_Compare_At_Price, Image_Src, link,} = Astro.props;
 ---
 
-<a href={Image_Src} class="product-card">
+<a href=`details/${id}` class="product-card">
   <div class="image-wrapper">
     <img src={Image_Src} alt={Title} loading="lazy" />
   </div>
